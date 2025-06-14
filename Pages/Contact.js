@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
-import { SendEmail } from "@/integrations/Core";
+import { SendEmail } from "../integrations/Core";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });

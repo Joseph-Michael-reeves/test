@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Project } from "@/entities/Project";
+import { Project } from "../Entities/Project";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageUrl } from "../utils";
 import { ArrowRight } from "lucide-react";
 
 export default function Portfolio() {
