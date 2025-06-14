@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Project } from "@/entities/Project";
+import { Project } from "../Entities/Project";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function TheSpace() {
