@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREWHAUS - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href__="https://fonts.googleapis.com">
+    <link rel="preconnect" href__="https://fonts.gstatic.com" crossorigin>
+    <link
+        href__="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@1,400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFCF2;
+            color: #252422;
+        }
+
+        .font-serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .active-link {
+            color: #EB5E28 !important;
+            font-weight: 700;
+        }
+
+        .text-accent {
+            color: #EB5E28;
+        }
+
+        .bg-accent {
+            background-color: #EB5E28;
+        }
+
+        .text-primary {
+            color: #252422;
+        }
+
+        .text-secondary {
+            color: #403D39;
+        }
+
+        .bg-secondary {
+            background-color: #CCC5B9;
+        }
+
+        .text-base-inv {
+            color: #FFFCF2;
+        }
+    </style>
+</head>
+
+<body class="py-20">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="text-2xl font-bold text-secondary">BREWHAUS</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium transition-colors hover:text-accent text-primary">Home</a>
+                    <a href="the-space.html" class="font-medium transition-colors hover:text-accent text-primary">The
+                        Space</a>
+                    <a href="design-story.html"
+                        class="font-medium transition-colors hover:text-accent text-primary">Design Story</a>
+                    <a href="site-analysis.html"
+                        class="font-medium transition-colors hover:text-accent text-primary">Site Analysis</a>
+                    <a href="contact.html"
+                        class="font-medium transition-colors hover:text-accent active-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="max-w-5xl mx-auto px-6 pt-16">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Contact</h1>
+            <p class="text-xl max-w-2xl mx-auto text-secondary">Visit us or send an inquiry about the design.</p>
+        </div>
+        <div class="grid lg:grid-cols-5 gap-16">
+            <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold mb-8">Our Location</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#252422" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">BREWHAUS Roastery</h3>
+                            <p class="text-secondary">123 Design Street<br>Creative District, CD 12345</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#252422" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Press & Design Inquiries</h3>
+                            <p class="text-secondary">design@brewhaus.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop"
+                        alt="Coffee being poured" class="w-full h-auto object-cover">
+                </div>
+            </div>
+            <div class="lg:col-span-3 p-8 rounded-lg bg-secondary">
+                <form action="#" method="POST" class="space-y-6">
+                    <h2 class="text-3xl font-bold mb-4">Send an Inquiry</h2>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Name</label>
+                        <input type="text" name="name" required
+                            class="w-full bg-white/50 border border-transparent rounded-lg px-4 py-3 focus:outline-none focus:border-orange-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" name="email" required
+                            class="w-full bg-white/50 border border-transparent rounded-lg px-4 py-3 focus:outline-none focus:border-orange-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Message</label>
+                        <textarea name="message" required rows="5"
+                            class="w-full bg-white/50 border border-transparent rounded-lg px-4 py-3 focus:outline-none focus:border-orange-500 transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" disabled
+                        class="w-full py-3 rounded-lg font-semibold transition-opacity disabled:opacity-50 flex items-center justify-center bg-accent text-base-inv cursor-not-allowed">
+                        Submission Disabled
+                    </button>
+                    <p class="text-center text-sm text-secondary">Note: Form submission is disabled in this static HTML
+                        version.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

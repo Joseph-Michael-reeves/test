@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREWHAUS - Site Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href__="https://fonts.googleapis.com">
+    <link rel="preconnect" href__="https://fonts.gstatic.com" crossorigin>
+    <link
+        href__="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@1,400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFCF2;
+            color: #252422;
+        }
+
+        .font-serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .active-link {
+            color: #EB5E28 !important;
+            font-weight: 700;
+        }
+
+        .text-accent {
+            color: #EB5E28;
+        }
+
+        .text-primary {
+            color: #252422;
+        }
+
+        .text-secondary {
+            color: #403D39;
+        }
+
+        .bg-secondary {
+            background-color: #CCC5B9;
+        }
+
+        .border-secondary {
+            border-color: #CCC5B9;
+        }
+    </style>
+</head>
+
+<body class="py-20">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="text-2xl font-bold text-secondary">BREWHAUS</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium transition-colors hover:text-accent text-primary">Home</a>
+                    <a href="the-space.html" class="font-medium transition-colors hover:text-accent text-primary">The
+                        Space</a>
+                    <a href="design-story.html"
+                        class="font-medium transition-colors hover:text-accent text-primary">Design Story</a>
+                    <a href="site-analysis.html"
+                        class="font-medium transition-colors hover:text-accent active-link">Site Analysis</a>
+                    <a href="contact.html"
+                        class="font-medium transition-colors hover:text-accent text-primary">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-6 pt-16">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-primary">Site Analysis</h1>
+            <p class="text-xl max-w-3xl mx-auto text-secondary">Insights that shaped the BREWHAUS interior.</p>
+        </div>
+        <section class="mb-20 grid md:grid-cols-3 gap-8 text-center">
+            <!-- Cards here -->
+        </section>
+        <section class="mb-20 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-4">Climate & Light Study</h2>
+                <div class="h-80 rounded-lg p-4 bg-secondary"><canvas id="climateChart"></canvas></div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-4">Neighborhood Land Use</h2>
+                <div class="h-80 rounded-lg p-4 flex justify-center items-center bg-secondary"><canvas
+                        id="landUseChart"></canvas></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Climate Chart
+            const climateCtx = document.getElementById('climateChart').getContext('2d');
+            new Chart(climateCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'High Temp (°C)', data: [13, 15, 18, 23, 28, 31, 32, 32, 31, 27, 21, 16],
+                        borderColor: '#EB5E28', backgroundColor: 'rgba(235, 94, 40, 0.1)', tension: 0.3, fill: true
+                    }, {
+                        label: 'Low Temp (°C)', data: [6, 7, 9, 13, 17, 19, 22, 22, 20, 17, 12, 8],
+                        borderColor: '#403D39', backgroundColor: 'rgba(64, 61, 57, 0.1)', tension: 0.3, fill: true
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+            });
+
+            // Land Use Chart
+            const landUseCtx = document.getElementById('landUseChart').getContext('2d');
+            new Chart(landUseCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Commercial', 'Residential', 'Mixed-Use', 'Green Space'],
+                    datasets: [{ data: [45, 25, 20, 10], backgroundColor: ['#EB5E28', '#403D39', '#CCC5B9', '#8FBC8F'] }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }
+            });
+        });
+    </script>
+</body>
+
+</html>

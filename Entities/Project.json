@@ -1,0 +1,154 @@
+{
+    "name": "Project",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string",
+            "enum": [
+                "Main Space",
+                "The Bar",
+                "Lighting",
+                "Furniture",
+                "Details",
+                "Exterior"
+            ]
+        },
+        "image_url": {
+            "type": "string"
+        },
+        "materials": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "featured": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "title",
+        "category",
+        "image_url"
+    ],
+    "projects": [
+        {
+            "title": "Hand-Troweled Concrete Bar",
+            "category": "The Bar",
+            "image_url": "https://images.unsplash.com/photo-1572177191854-182e1b59f817?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Concrete",
+                "Brass"
+            ],
+            "featured": true
+        },
+        {
+            "title": "Custom Oak Booth Seating",
+            "category": "Furniture",
+            "image_url": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Oak",
+                "Leather"
+            ],
+            "featured": true
+        },
+        {
+            "title": "Ambient Pendant Lighting",
+            "category": "Lighting",
+            "image_url": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Brass",
+                "Glass"
+            ],
+            "featured": true
+        },
+        {
+            "title": "Exposed Brick Wall",
+            "category": "Main Space",
+            "image_url": "https://images.unsplash.com/photo-1618173482128-15cb6d38e3f3?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Brick",
+                "Reclaimed Wood"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Leather Lounge Chairs",
+            "category": "Furniture",
+            "image_url": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Leather",
+                "Steel"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Minimalist Exterior Signage",
+            "category": "Exterior",
+            "image_url": "https://images.unsplash.com/photo-1588361861040-fb541f3e7602?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Steel"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Polished Concrete Floors",
+            "category": "Main Space",
+            "image_url": "https://images.unsplash.com/photo-1621834294d78-b531ac853388?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Concrete"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Brass Tap System",
+            "category": "The Bar",
+            "image_url": "https://images.unsplash.com/photo-1600891963952-32ae38c6e5e9?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Brass"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Ceramic Tableware",
+            "category": "Details",
+            "image_url": "https://images.unsplash.com/photo-1565679347898-85885f8f845a?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Ceramic"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Greenery & Planters",
+            "category": "Details",
+            "image_url": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Plants"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Track Lighting System",
+            "category": "Lighting",
+            "image_url": "https://images.unsplash.com/photo-1623916965324-4bb835c67e98?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Steel"
+            ],
+            "featured": false
+        },
+        {
+            "title": "Outdoor Seating Area",
+            "category": "Exterior",
+            "image_url": "https://images.unsplash.com/photo-1584222068692-82a17336f564?q=80&w=800&auto=format&fit=crop",
+            "materials": [
+                "Wood",
+                "Steel"
+            ],
+            "featured": false
+        }
+    ]
+}
